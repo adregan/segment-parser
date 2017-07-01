@@ -1,0 +1,23 @@
+{
+  "name": "eave-takehome",
+  "version": "1.0.0",
+  "description": "A metro 2 format parser",
+  "main": "index.js",
+  "dependencies": { },
+  "devDependencies": {
+    "typescript": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adregan/eave.git"
+  },
+  "author": "Duncan Regan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adregan/eave/issues"
+  },
+  "homepage": "https://github.com/adregan/eave#readme"
+}
