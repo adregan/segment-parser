@@ -1,4 +1,4 @@
-import { camelCase } from 'lodash';
+import camelCase from 'lodash/camelCase';
 import { Config, ParserConfig, Field, ParserField } from './index';
 
 export default function parse(config: Config): ParserConfig {

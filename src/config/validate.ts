@@ -1,4 +1,5 @@
-import { isEmpty, range } from 'lodash';
+import range from 'lodash/range';
+import isEmpty from 'lodash/isEmpty';
 import { Config } from './index';
 
 export default function validate(config: Config): Config {
