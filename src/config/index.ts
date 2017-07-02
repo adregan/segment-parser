@@ -16,15 +16,15 @@ export interface Config {
   size: number;
 }
 
-export interface SegmentParserField {
+export interface ParserField {
   id: number;
   name: string;
   range: [number, number];
   convertTo: 'string' | 'number' | 'date' | 'array';
 }
 
-export interface SegmentParserConfig {
-  fields: SegmentParserField[];
+export interface ParserConfig {
+  fields: ParserField[];
   name: string;
 }
 
