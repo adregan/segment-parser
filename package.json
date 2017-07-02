@@ -2,10 +2,10 @@
   "name": "eave",
   "version": "1.0.0",
   "description": "A metro 2 format parser",
-  "main": "index.js",
   "dependencies": {
     "lodash": "^4.17.4"
   },
+  "main": "lib/index.js",
   "devDependencies": {
     "@types/jest": "^20.0.2",
     "@types/lodash": "^4.14.68",
