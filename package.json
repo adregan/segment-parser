@@ -20,8 +20,10 @@
     "typescript": "^2.4.1"
   },
   "scripts": {
-    "prebuild": "yarn clean-build",
-    "build": "tsc && rollup -c",
+    "prebuild": "yarn clean-build && tsc",
+    "build-cjs": "rollup -c",
+    "build-browser": "rollup -c rollup.browser.js",
+    "build": "yarn build-cjs && yarn build-browser",
     "clean-build": "rm -rf dist/",
     "precommit": "lint-staged",
     "pretty": "prettier --single-quote --write src/**/*.{js,ts}",
