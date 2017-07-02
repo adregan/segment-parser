@@ -34,3 +34,21 @@ describe('sizeInvalid', () => {
   });
 });
 
+describe('createOverlapCheck', () => {
+  it('returns a checkOverlap function', () => {
+    expect(createOverlapCheck()).toBeInstanceOf(Function);
+  });
+});
+
+describe('checkOverlap', () => {
+  it('returns false with a conflicting value if ranges overlap', () => {
+    const checkOverlap = createOverlapCheck();
+
+    expect(checkOverlap(1, 4, 'fieldOne')).toEqual({ overlaps: false });
+    expect(checkOverlap(5, 15, 'fieldTwo')).toEqual({ overlaps: false });
+    expect(checkOverlap(14, 20, 'fieldThree')).toEqual({
+      overlaps: true,
+      conflicting: 'fieldTwo'
+    });
+  });
+});
