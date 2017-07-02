@@ -1,5 +1,5 @@
 {
-  "name": "eave-takehome",
+  "name": "eave",
   "version": "1.0.0",
   "description": "A metro 2 format parser",
   "main": "index.js",
@@ -13,13 +13,20 @@
     "jest": "^20.0.4",
     "lint-staged": "^4.0.0",
     "prettier": "^1.5.2",
+    "rollup": "^0.43.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "ts-jest": "^20.0.6",
     "typescript": "^2.4.1"
   },
   "scripts": {
+    "prebuild": "yarn clean-build",
+    "build": "tsc && rollup -c",
+    "clean-build": "rm -rf dist/",
     "precommit": "lint-staged",
     "pretty": "prettier --single-quote --write src/**/*.{js,ts}",
-    "test": "jest"
+    "types": "tsc -w",
+    "test": "jest --watch"
   },
   "jest": {
     "globals": {
