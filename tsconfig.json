@@ -7,5 +7,12 @@
     "preserveConstEnums": true,
     "target": "ES5",
     "lib": ["es5", "es6"]
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
 }
