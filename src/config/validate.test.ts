@@ -63,7 +63,7 @@ describe('validate', () => {
       'Valid configurations must provide fields, a name, and a size';
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: 'cool',
         start: 1,
         end: 4,
@@ -84,14 +84,14 @@ describe('validate', () => {
 
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: 'cool',
         start: 1,
         end: 4,
         size: 4
       },
       {
-        field: 2,
+        fieldId: 2,
         fieldName: 'super',
         start: 5,
         end: 10,
@@ -107,7 +107,7 @@ describe('validate', () => {
     const error = `The start of the field '${name}' cannot be greater than or equal to the end`;
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: name,
         start: 5,
         end: 4,
@@ -123,7 +123,7 @@ describe('validate', () => {
     const error = `The start and end positions do not equal to the size of ${name}`;
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: name,
         start: 1,
         end: 4,
@@ -138,21 +138,21 @@ describe('validate', () => {
     const error = `The positions of 'fieldThree' overlap the positions of 'fieldTwo'`;
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: 'fieldOne',
         start: 1,
         end: 4,
         size: 4
       },
       {
-        field: 2,
+        fieldId: 2,
         fieldName: 'fieldTwo',
         start: 5,
         end: 10,
         size: 6
       },
       {
-        field: 3,
+        fieldId: 3,
         fieldName: 'fieldThree',
         start: 8,
         end: 15,
@@ -168,21 +168,21 @@ describe('validate', () => {
   it('returns the config if valid', () => {
     const fields = [
       {
-        field: 1,
+        fieldId: 1,
         fieldName: 'fieldOne',
         start: 1,
         end: 4,
         size: 4
       },
       {
-        field: 2,
+        fieldId: 2,
         fieldName: 'fieldTwo',
         start: 5,
         end: 10,
         size: 6
       },
       {
-        field: 3,
+        fieldId: 3,
         fieldName: 'fieldThree',
         start: 11,
         end: 15,

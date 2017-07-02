@@ -2,7 +2,7 @@ import validate from './validate';
 import parse from './parse';
 
 export interface Field {
-  field: number;
+  fieldId: number;
   fieldName: string;
   start: number;
   end: number;
