@@ -1,5 +1,6 @@
 import { isEmpty, range } from 'lodash';
-import { Config } from './MetroSegment';
+import { Config } from './index';
+
 
 export default function validate(config: Config): Config {
   const { fields, size, name } = config;
