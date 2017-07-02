@@ -2,6 +2,7 @@ import validate from './validate';
 import parse from './parse';
 
 type FieldType = 'alphanumeric' | 'numeric' | 'date';
+export type ConversionType = FieldType;
 
 export interface Field {
   fieldId: number;
