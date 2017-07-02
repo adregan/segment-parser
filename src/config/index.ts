@@ -1,13 +1,15 @@
 import validate from './validate';
 import parse from './parse';
 
+type FieldType = 'alphanumeric' | 'numeric' | 'date';
+
 export interface Field {
   fieldId: number;
   fieldName: string;
   start: number;
   end: number;
   size: number;
-  fieldType?: 'string' | 'number' | 'date' | 'array';
+  fieldType?: FieldType;
 }
 
 export interface Config {
@@ -20,7 +22,7 @@ export interface ParserField {
   id: number;
   name: string;
   range: [number, number];
-  convertTo: 'string' | 'number' | 'date' | 'array';
+  convertTo: FieldType;
 }
 
 export interface ParserConfig {
