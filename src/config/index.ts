@@ -7,6 +7,7 @@ export interface Field {
   start: number;
   end: number;
   size: number;
+  fieldType?: 'string' | 'number' | 'date' | 'array';
 }
 
 export interface Config {
@@ -19,6 +20,7 @@ export interface SegmentParserField {
   id: number;
   name: string;
   range: [number, number];
+  convertTo: 'string' | 'number' | 'date' | 'array';
 }
 
 export interface SegmentParserConfig {
