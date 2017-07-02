@@ -4,14 +4,6 @@ import resolve from 'rollup-plugin-node-resolve';
 export default {
   entry: 'dist/SegmentParser.js',
   format: 'cjs',
-  plugins: [
-    resolve({
-      jsnext: true,
-      main: true
-    }),
-    commonjs({
-      include: 'node_modules/**'
-    })
-  ],
+  plugins: [resolve({ jsnext: true, main: true }), commonjs()],
   dest: 'lib/index.js'
 };
