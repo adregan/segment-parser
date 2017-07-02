@@ -18,6 +18,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
+    "pretty": "prettier --single-quote --write src/**/*.{js,ts}",
     "test": "jest"
   },
   "jest": {
@@ -30,6 +31,10 @@
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
