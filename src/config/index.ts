@@ -28,4 +28,4 @@ export interface SegmentParserConfig {
   name: string;
 }
 
-export { validate, parse };
+export { validate, parse as parseConfig };
