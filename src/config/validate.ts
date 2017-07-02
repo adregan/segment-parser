@@ -1,11 +1,10 @@
-import { isEmpty, range } from 'lodash';
-import { Config } from './index';
-
+import { isEmpty, range } from "lodash";
+import { Config } from "./index";
 
 export default function validate(config: Config): Config {
   const { fields, size, name } = config;
   if (isEmpty(fields) || !size || isEmpty(name)) {
-    throw Error('Valid configurations must provide fields, a name, and a size');
+    throw Error("Valid configurations must provide fields, a name, and a size");
   }
 
   const checkOverlap = createOverlapCheck();
@@ -38,7 +37,7 @@ export default function validate(config: Config): Config {
 
   if (computedSize !== size) {
     throw Error(
-      'The computed size of all fields does not match the given segment size'
+      "The computed size of all fields does not match the given segment size"
     );
   }
 
