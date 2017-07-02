@@ -1,5 +1,23 @@
 import { positionsInvalid, createOverlapCheck, sizeInvalid } from './validate';
 
+describe('positionsInvalid', () => {
+  it('returns true if the start is equal to the end', () => {
+    [1, 2, 3, 4, 5].forEach(n => expect(positionsInvalid(n, n)).toBeTruthy());
+  });
+
+  it('returns true if the start is greater than the end', () => {
+    [1, 2, 3, 4, 5].forEach(n =>
+      expect(positionsInvalid(n * 2, n)).toBeTruthy()
+    );
+  });
+
+  it('returns false if the start less than the end', () => {
+    [1, 2, 3, 4, 5].forEach(n =>
+      expect(positionsInvalid(n, n * 2)).toBeFalsy()
+    );
+  });
+});
+
 describe('sizeInvalid', () => {
   it('returns true if the positions do not cover the size provided', () => {
     expect(sizeInvalid(1, 4, 5)).toBeTruthy();
