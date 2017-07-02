@@ -10,9 +10,9 @@ export default function parse(config: Config): ParserConfig {
 }
 
 export function parseField(field: Field): ParserField {
-  const range: [number, number] = [start - 1, end - 1];
-  const convertTo = fieldType;
   const { end, fieldId: id, fieldName, start, fieldType } = field;
+  const range: [number, number] = [start - 1, end];
+  const convertTo = fieldType || 'alphanumeric';
   const name = camelCase(fieldName);
 
   return { id, name, range, convertTo };
