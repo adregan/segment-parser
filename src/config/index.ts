@@ -15,4 +15,15 @@ export interface Config {
   size: number;
 }
 
+export interface SegmentParserField {
+  id: number;
+  name: string;
+  range: [number, number];
+}
+
+export interface SegmentParserConfig {
+  fields: SegmentParserField[];
+  name: string;
+}
+
 export { validate, parse };
