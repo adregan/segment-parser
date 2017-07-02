@@ -1,4 +1,5 @@
 import parse, { parseField } from './parse';
+import { Config } from './index';
 
 describe('parseField', () => {
   it('returns a parsed field', () => {
@@ -12,9 +13,9 @@ describe('parseField', () => {
 
     const expected = {
       id: 4,
-      name: 'CCA Identifier',
-      range: [12, 21],
-      convertTo: 'string'
+      name: 'ccaIdentifier',
+      range: [12, 22],
+      convertTo: 'alphanumeric'
     };
 
     expect(parseField(test)).toEqual(expected);
@@ -23,7 +24,7 @@ describe('parseField', () => {
 
 describe('parse', () => {
   it('returns a parsed config', () => {
-    const test = {
+    const test: Config = {
       name: 'Header Record',
       size: 12,
       fields: [
@@ -41,7 +42,7 @@ describe('parse', () => {
           start: 5,
           end: 10,
           size: 6,
-          fieldType: 'number'
+          fieldType: 'numeric'
         },
         {
           fieldId: 3,
@@ -49,31 +50,31 @@ describe('parse', () => {
           start: 11,
           end: 12,
           size: 2,
-          fieldType: 'array'
+          fieldType: 'alphanumeric'
         }
       ]
     };
 
     const expected = {
-      name: 'Header Record',
+      name: 'headerRecord',
       fields: [
         {
           id: 1,
-          name: 'Record Descriptor',
-          range: [0, 3],
+          name: 'recordDescriptor',
+          range: [0, 4],
           convertTo: 'date'
         },
         {
           id: 2,
-          name: 'Record Identifier',
-          range: [4, 9],
-          convertTo: 'number'
+          name: 'recordIdentifier',
+          range: [4, 10],
+          convertTo: 'numeric'
         },
         {
           id: 3,
-          name: 'Cycle Number',
-          range: [10, 11],
-          convertTo: 'array'
+          name: 'cycleNumber',
+          range: [10, 12],
+          convertTo: 'alphanumeric'
         }
       ]
     };

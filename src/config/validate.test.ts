@@ -3,6 +3,7 @@ import validate, {
   createOverlapCheck,
   sizeInvalid
 } from './validate';
+import { Field } from './index';
 
 describe('positionsInvalid', () => {
   it('returns true if the start is equal to the end', () => {
@@ -61,13 +62,14 @@ describe('validate', () => {
   it('throws if the config is missing fields, name, or size', () => {
     const error =
       'Valid configurations must provide fields, a name, and a size';
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: 'cool',
         start: 1,
         end: 4,
-        size: 4
+        size: 4,
+        fieldType: 'alphanumeric'
       }
     ];
 
@@ -82,20 +84,22 @@ describe('validate', () => {
     const error =
       'The computed size of all fields does not match the given segment size';
 
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: 'cool',
         start: 1,
         end: 4,
-        size: 4
+        size: 4,
+        fieldType: 'alphanumeric'
       },
       {
         fieldId: 2,
         fieldName: 'super',
         start: 5,
         end: 10,
-        size: 6
+        size: 6,
+        fieldType: 'alphanumeric'
       }
     ];
 
@@ -105,13 +109,14 @@ describe('validate', () => {
   it('throws if it encounters a field with an invalid position', () => {
     const name = 'BadPos';
     const error = `The start of the field '${name}' cannot be greater than or equal to the end`;
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: name,
         start: 5,
         end: 4,
-        size: 4
+        size: 4,
+        fieldType: 'alphanumeric'
       }
     ];
 
@@ -121,13 +126,14 @@ describe('validate', () => {
   it('throws if it encounters a field with an invalid size', () => {
     const name = 'BadSize';
     const error = `The start and end positions do not equal to the size of ${name}`;
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: name,
         start: 1,
         end: 4,
-        size: 5
+        size: 5,
+        fieldType: 'alphanumeric'
       }
     ];
 
@@ -136,27 +142,30 @@ describe('validate', () => {
 
   it('throws if the positions of 2 fields overlap', () => {
     const error = `The positions of 'fieldThree' overlap the positions of 'fieldTwo'`;
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: 'fieldOne',
         start: 1,
         end: 4,
-        size: 4
+        size: 4,
+        fieldType: 'alphanumeric'
       },
       {
         fieldId: 2,
         fieldName: 'fieldTwo',
         start: 5,
         end: 10,
-        size: 6
+        size: 6,
+        fieldType: 'alphanumeric'
       },
       {
         fieldId: 3,
         fieldName: 'fieldThree',
         start: 8,
         end: 15,
-        size: 8
+        size: 8,
+        fieldType: 'alphanumeric'
       }
     ];
 
@@ -166,27 +175,30 @@ describe('validate', () => {
   });
 
   it('returns the config if valid', () => {
-    const fields = [
+    const fields: Field[] = [
       {
         fieldId: 1,
         fieldName: 'fieldOne',
         start: 1,
         end: 4,
-        size: 4
+        size: 4,
+        fieldType: 'alphanumeric'
       },
       {
         fieldId: 2,
         fieldName: 'fieldTwo',
         start: 5,
         end: 10,
-        size: 6
+        size: 6,
+        fieldType: 'alphanumeric'
       },
       {
         fieldId: 3,
         fieldName: 'fieldThree',
         start: 11,
         end: 15,
-        size: 5
+        size: 5,
+        fieldType: 'alphanumeric'
       }
     ];
 
