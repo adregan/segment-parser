@@ -3,7 +3,9 @@
     "module": "es2015",
     "noImplicitAny": true,
     "removeComments": true,
+    "outDir": "dist",
     "preserveConstEnums": true,
-    "target": "ES5"
+    "target": "ES5",
+    "lib": ["es5", "es6"]
   }
 }
