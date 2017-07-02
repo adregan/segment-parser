@@ -1,4 +1,8 @@
-import { positionsInvalid, createOverlapCheck, sizeInvalid } from './validate';
+import validate, {
+  positionsInvalid,
+  createOverlapCheck,
+  sizeInvalid
+} from './validate';
 
 describe('positionsInvalid', () => {
   it('returns true if the start is equal to the end', () => {
@@ -50,5 +54,148 @@ describe('checkOverlap', () => {
       overlaps: true,
       conflicting: 'fieldTwo'
     });
+  });
+});
+
+describe('validate', () => {
+  it('throws if the config is missing fields, name, or size', () => {
+    const error =
+      'Valid configurations must provide fields, a name, and a size';
+    const fields = [
+      {
+        field: 1,
+        fieldName: 'cool',
+        start: 1,
+        end: 4,
+        size: 4
+      }
+    ];
+
+    expect(() => validate({ fields: [], name: 'NoFields', size: 301 })).toThrow(
+      error
+    );
+    expect(() => validate({ fields, name: 'NoSize', size: 0 })).toThrow(error);
+    expect(() => validate({ fields, name: '', size: 234 })).toThrow(error);
+  });
+
+  it('throws if the computed field size is not the same as the segment size', () => {
+    const error =
+      'The computed size of all fields does not match the given segment size';
+
+    const fields = [
+      {
+        field: 1,
+        fieldName: 'cool',
+        start: 1,
+        end: 4,
+        size: 4
+      },
+      {
+        field: 2,
+        fieldName: 'super',
+        start: 5,
+        end: 10,
+        size: 6
+      }
+    ];
+
+    expect(() => validate({ fields, name: 'BadSize', size: 8 })).toThrow(error);
+  });
+
+  it('throws if it encounters a field with an invalid position', () => {
+    const name = 'BadPos';
+    const error = `The start of the field '${name}' cannot be greater than or equal to the end`;
+    const fields = [
+      {
+        field: 1,
+        fieldName: name,
+        start: 5,
+        end: 4,
+        size: 4
+      }
+    ];
+
+    expect(() => validate({ fields, name: 'InvPos', size: 4 })).toThrow(error);
+  });
+
+  it('throws if it encounters a field with an invalid size', () => {
+    const name = 'BadSize';
+    const error = `The start and end positions do not equal to the size of ${name}`;
+    const fields = [
+      {
+        field: 1,
+        fieldName: name,
+        start: 1,
+        end: 4,
+        size: 5
+      }
+    ];
+
+    expect(() => validate({ fields, name: 'BadSize', size: 5 })).toThrow(error);
+  });
+
+  it('throws if the positions of 2 fields overlap', () => {
+    const error = `The positions of 'fieldThree' overlap the positions of 'fieldTwo'`;
+    const fields = [
+      {
+        field: 1,
+        fieldName: 'fieldOne',
+        start: 1,
+        end: 4,
+        size: 4
+      },
+      {
+        field: 2,
+        fieldName: 'fieldTwo',
+        start: 5,
+        end: 10,
+        size: 6
+      },
+      {
+        field: 3,
+        fieldName: 'fieldThree',
+        start: 8,
+        end: 15,
+        size: 8
+      }
+    ];
+
+    expect(() => validate({ fields, name: 'Overlap', size: 18 })).toThrow(
+      error
+    );
+  });
+
+  it('returns the config if valid', () => {
+    const fields = [
+      {
+        field: 1,
+        fieldName: 'fieldOne',
+        start: 1,
+        end: 4,
+        size: 4
+      },
+      {
+        field: 2,
+        fieldName: 'fieldTwo',
+        start: 5,
+        end: 10,
+        size: 6
+      },
+      {
+        field: 3,
+        fieldName: 'fieldThree',
+        start: 11,
+        end: 15,
+        size: 5
+      }
+    ];
+
+    const config = {
+      fields,
+      name: 'GoodConfig',
+      size: 15
+    };
+
+    expect(validate(config)).toEqual(config);
   });
 });
