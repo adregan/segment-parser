@@ -16,6 +16,7 @@ export function parseField(field: Field): ParserField {
     fieldType = 'string'
   } = field;
   const range: [number, number] = [start - 1, end - 1];
+  const convertTo = fieldType;
 
-  return { id, name, range };
+  return { id, name, range, convertTo };
 }
