@@ -1,3 +1,3 @@
-import parse from "./parse";
+import parse from './parse';
 
-test("todo", () => {});
+test('todo', () => {});
