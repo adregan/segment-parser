@@ -39,7 +39,7 @@ export default class SegmentParser {
    * ```
    *
    * where the size given in the config must equal the sum of all of the fields'
-   * sizes. Similarly, a field's start and end must position must account for
+   * sizes. Similarly, a field's start and end position must account for
    * the same size as the given field's size.
    * @param {Config} config - config object
    */
