@@ -18,7 +18,13 @@ export default class SegmentParser {
   }
 
   parse(input: string): ParsedData {
-    const { fields } = this.config;
+    const { fields, size } = this.config;
+
+    if (input.length !== size) {
+      throw Error(
+        'The provided data does not match the length for this section'
+      );
+    }
 
     return fields.reduce((accum, field) => {
       const { name, range, convertTo } = field;
