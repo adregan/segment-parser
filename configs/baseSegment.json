@@ -21,7 +21,7 @@
     {
       "fieldId": 3,
       "fieldName": "Time Stamp",
-      "fieldType": "timestamp",
+      "fieldType": "date",
       "start": 6,
       "end": 19,
       "size": 14
