@@ -12,8 +12,25 @@ function main() {
   const HeaderParser = new SegmentParser(headerRecord);
   const BaseSegmentParser = new SegmentParser(baseSegment);
 
-  console.log(HeaderParser.parse(headerSample));
-  console.log(BaseSegmentParser.parse(baseSample));
+  const parsedHeader = HeaderParser.parse(headerSample);
+  const parsedBase = BaseSegmentParser.parse(baseSample);
+
+  console.log(`
+
+=======================================
+          Parsed Header:
+=======================================
+
+${JSON.stringify(parsedHeader, null, 2)}
+
+
+=======================================
+          Parsed Base:
+=======================================
+
+${JSON.stringify(parsedBase, null, 2)}
+
+  `);
 }
 
 main();
