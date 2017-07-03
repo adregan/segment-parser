@@ -39,13 +39,14 @@ export default class SegmentParser {
       case 'numeric':
         return parseInt(s);
 
+      // TODO: Handle timestamps
       case 'date':
         const re = /(\d{2})(\d{2})(\d{4})/;
         const [, month, day, year] = re.exec(s);
         return new Date(`${month}/${day}/${year}`);
 
       default:
-        return s;
+        return s.trim();
     }
   }
 }
