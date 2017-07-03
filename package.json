@@ -1,7 +1,7 @@
 {
-  "name": "eave",
+  "name": "segment-parser",
   "version": "1.0.0",
-  "description": "A metro 2 format parser",
+  "description": "A segment parser run by configs",
   "dependencies": {
     "lodash": "^4.17.4"
   },
@@ -55,12 +55,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adregan/eave.git"
+    "url": "git+https://github.com/adregan/segment-parser.git"
   },
   "author": "Duncan Regan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adregan/eave/issues"
+    "url": "https://github.com/adregan/segment-parser/issues"
   },
-  "homepage": "https://github.com/adregan/eave#readme"
+  "homepage": "https://github.com/adregan/segment-parser#readme"
 }
