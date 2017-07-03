@@ -29,6 +29,7 @@ export interface ParserField {
 export interface ParserConfig {
   fields: ParserField[];
   name: string;
+  size: number;
 }
 
 export { validate, parse as parseConfig };

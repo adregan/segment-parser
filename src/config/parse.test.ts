@@ -57,6 +57,7 @@ describe('parse', () => {
 
     const expected = {
       name: 'headerRecord',
+      size: 12,
       fields: [
         {
           id: 1,
