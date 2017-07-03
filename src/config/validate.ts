@@ -46,7 +46,7 @@ export default function validate(config: Config): Config {
 }
 
 export function positionsInvalid(start: number, end: number): boolean {
-  return start >= end;
+  return start > end;
 }
 
 export function sizeInvalid(start: number, end: number, size: number): boolean {

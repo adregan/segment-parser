@@ -6,8 +6,8 @@ import validate, {
 import { Field } from './index';
 
 describe('positionsInvalid', () => {
-  it('returns true if the start is equal to the end', () => {
-    [1, 2, 3, 4, 5].forEach(n => expect(positionsInvalid(n, n)).toBeTruthy());
+  it('returns false if the start is equal to the end', () => {
+    [1, 2, 3, 4, 5].forEach(n => expect(positionsInvalid(n, n)).toBeFalsy());
   });
 
   it('returns true if the start is greater than the end', () => {
