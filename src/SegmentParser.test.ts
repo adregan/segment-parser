@@ -55,5 +55,12 @@ describe('SegmentParser', () => {
         activityDate: new Date('March 16, 2017')
       });
     });
+
+    it('throws an error if the input does not match the section size', () => {
+      const TestParser = new SegmentParser(config);
+      expect(() => TestParser.parse('')).toThrow(
+        'The provided data does not match the length for this section'
+      );
+    });
   });
 });
