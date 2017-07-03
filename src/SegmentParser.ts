@@ -1,10 +1,10 @@
 import {
   Config,
   ParserConfig,
-  validate,
+  validateConfig,
   parseConfig,
   ConversionType
-} from './config/index';
+} from './configUtils/index';
 
 type Parsed = string | number | Date;
 interface ParsedData {
@@ -44,7 +44,7 @@ export default class SegmentParser {
    * @param {Config} config - config object
    */
   constructor(rawConfig: Config) {
-    this.config = parseConfig(validate(rawConfig));
+    this.config = parseConfig(validateConfig(rawConfig));
   }
 
   /**

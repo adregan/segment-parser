@@ -32,4 +32,4 @@ export interface ParserConfig {
   size: number;
 }
 
-export { validate, parse as parseConfig };
+export { validate as validateConfig, parse as parseConfig };
