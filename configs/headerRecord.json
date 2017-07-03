@@ -1,0 +1,143 @@
+{
+  "name": "Header Record",
+  "size": 426,
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "Record Descriptor Word",
+      "fieldType": "alphanumeric",
+      "start": 1,
+      "end": 4,
+      "size": 4
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "Record Identifier",
+      "fieldType": "alphanumeric",
+      "start": 5,
+      "end": 10,
+      "size": 6
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "Cycle Number",
+      "fieldType": "alphanumeric",
+      "start": 11,
+      "end": 12,
+      "size": 2
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "Innovis Program Identifier",
+      "fieldType": "alphanumeric",
+      "start": 13,
+      "end": 22,
+      "size": 10
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "Equifax Program Identifier",
+      "fieldType": "alphanumeric",
+      "start": 23,
+      "end": 32,
+      "size": 10
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "Experian Program Identifier",
+      "fieldType": "alphanumeric",
+      "start": 33,
+      "end": 37,
+      "size": 5
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "TransUnion Program Identifier",
+      "fieldType": "alphanumeric",
+      "start": 38,
+      "end": 47,
+      "size": 10
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "Activity Date",
+      "fieldType": "date",
+      "start": 48,
+      "end": 55,
+      "size": 8
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "Date Created",
+      "fieldType": "date",
+      "start": 56,
+      "end": 63,
+      "size": 8
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "Program Date",
+      "fieldType": "date",
+      "start": 64,
+      "end": 71,
+      "size": 8
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "Program Revision Date",
+      "fieldType": "date",
+      "start": 72,
+      "end": 79,
+      "size": 8
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "Reporter Name",
+      "fieldType": "alphanumeric",
+      "start": 80,
+      "end": 119,
+      "size": 40
+    },
+
+    {
+      "fieldId": 13,
+      "fieldName": "Reporter Address",
+      "fieldType": "alphanumeric",
+      "start": 120,
+      "end": 215,
+      "size": 96
+    },
+    {
+      "fieldId": 14,
+      "fieldName": "Reporter Telephone Number",
+      "fieldType": "alphanumeric",
+      "start": 216,
+      "end": 225,
+      "size": 10
+    },
+    {
+      "fieldId": 15,
+      "fieldName": "Software Vendor Name",
+      "fieldType": "alphanumeric",
+      "start": 226,
+      "end": 265,
+      "size": 40
+    },
+    {
+      "fieldId": 16,
+      "fieldName": "Software Version Number",
+      "fieldType": "alphanumeric",
+      "start": 266,
+      "end": 270,
+      "size": 5
+    },
+    {
+      "fieldId": 17,
+      "fieldName": "Reserved",
+      "fieldType": "alphanumeric",
+      "start": 271,
+      "end": 426,
+      "size": 156
+    }
+  ]
+}

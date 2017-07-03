@@ -1,0 +1,382 @@
+{
+  "name": "Base Segment",
+  "size": 426,
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "Record Descriptor Word",
+      "fieldType": "alphanumeric",
+      "start": 1,
+      "end": 4,
+      "size": 4
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "Processing Indicator",
+      "fieldType": "numeric",
+      "start": 5,
+      "end": 5,
+      "size": 1
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "Time Stamp",
+      "fieldType": "timestamp",
+      "start": 6,
+      "end": 19,
+      "size": 14
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "Correction Indicatior",
+      "fieldType": "numeric",
+      "start": 20,
+      "end": 20,
+      "size": 1
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "Identification Number",
+      "fieldType": "alphanumeric",
+      "start": 21,
+      "end": 40,
+      "size": 20
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "Cycle Identifier",
+      "fieldType": "alphanumeric",
+      "start": 41,
+      "end": 42,
+      "size": 2
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "Consumer Account Number",
+      "fieldType": "alphanumeric",
+      "start": 43,
+      "end": 72,
+      "size": 30
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "Portfolio Type",
+      "fieldType": "alphanumeric",
+      "start": 73,
+      "end": 73,
+      "size": 1
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "Account Type",
+      "fieldType": "alphanumeric",
+      "start": 74,
+      "end": 75,
+      "size": 2
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "Date Opened",
+      "fieldType": "date",
+      "start": 76,
+      "end": 83,
+      "size": 8
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "Credit Limit",
+      "fieldType": "alphanumeric",
+      "start": 84,
+      "end": 92,
+      "size": 9
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "Highest Credit or Original Loan Amount",
+      "fieldType": "numeric",
+      "start": 93,
+      "end": 101,
+      "size": 9
+    },
+    {
+      "fieldId": 13,
+      "fieldName": "Terms Duration",
+      "fieldType": "alphanumeric",
+      "start": 102,
+      "end": 104,
+      "size": 3
+    },
+    {
+      "fieldId": 14,
+      "fieldName": "Terms Frequency",
+      "fieldType": "alphanumeric",
+      "start": 105,
+      "end": 105,
+      "size": 1
+    },
+    {
+      "fieldId": 15,
+      "fieldName": "Scheduled Monthly Payment Amount",
+      "fieldType": "numeric",
+      "start": 106,
+      "end": 114,
+      "size": 9
+    },
+    {
+      "fieldId": 16,
+      "fieldName": "Actual Payment Amount",
+      "fieldType": "numeric",
+      "start": 115,
+      "end": 123,
+      "size": 9
+    },
+    {
+      "fieldId": 17,
+      "fieldName": "Account Status",
+      "fieldType": "alphanumeric",
+      "start": 124,
+      "end": 125,
+      "size": 2
+    },
+    {
+      "fieldId": 17,
+      "fieldName": "Payment Rating",
+      "fieldType": "alphanumeric",
+      "start": 126,
+      "end": 126,
+      "size": 1
+    },
+    {
+      "fieldId": 18,
+      "fieldName": "Payment History Profile",
+      "fieldType": "alphanumeric",
+      "start": 127,
+      "end": 150,
+      "size": 24
+    },
+    {
+      "fieldId": 19,
+      "fieldName": "Special Comment",
+      "fieldType": "alphanumeric",
+      "start": 151,
+      "end": 152,
+      "size": 2
+    },
+    {
+      "fieldId": 20,
+      "fieldName": "Compliance Condition Code",
+      "fieldType": "alphanumeric",
+      "start": 153,
+      "end": 154,
+      "size": 2
+    },
+    {
+      "fieldId": 21,
+      "fieldName": "Current Balance",
+      "fieldType": "numeric",
+      "start": 155,
+      "end": 163,
+      "size": 9
+    },
+    {
+      "fieldId": 22,
+      "fieldName": "Amount Past Due",
+      "fieldType": "numeric",
+      "start": 164,
+      "end": 172,
+      "size": 9
+    },
+    {
+      "fieldId": 23,
+      "fieldName": "Original Charge-off Amount",
+      "fieldType": "numeric",
+      "start": 173,
+      "end": 181,
+      "size": 9
+    },
+    {
+      "fieldId": 24,
+      "fieldName": "Billing Date",
+      "fieldType": "date",
+      "start": 182,
+      "end": 189,
+      "size": 8
+    },
+    {
+      "fieldId": 25,
+      "fieldName": "Date of First Delinquency",
+      "fieldType": "date",
+      "start": 190,
+      "end": 197,
+      "size": 8
+    },
+    {
+      "fieldId": 26,
+      "fieldName": "Date Closed",
+      "fieldType": "date",
+      "start": 198,
+      "end": 205,
+      "size": 8
+    },
+    {
+      "fieldId": 27,
+      "fieldName": "Date of Last Payment",
+      "fieldType": "date",
+      "start": 206,
+      "end": 213,
+      "size": 8
+    },
+    {
+      "fieldId": 28,
+      "fieldName": "Reserved",
+      "fieldType": "alphanumeric",
+      "start": 214,
+      "end": 230,
+      "size": 17
+    },
+    {
+      "fieldId": 29,
+      "fieldName": "Consumer Transaction Type",
+      "fieldType": "alphanumeric",
+      "start": 231,
+      "end": 231,
+      "size": 1
+    },
+    {
+      "fieldId": 30,
+      "fieldName": "Surname",
+      "fieldType": "alphanumeric",
+      "start": 232,
+      "end": 256,
+      "size": 25
+    },
+    {
+      "fieldId": 31,
+      "fieldName": "First Name",
+      "fieldType": "alphanumeric",
+      "start": 257,
+      "end": 276,
+      "size": 20
+    },
+    {
+      "fieldId": 32,
+      "fieldName": "Middle Name",
+      "fieldType": "alphanumeric",
+      "start": 277,
+      "end": 296,
+      "size": 20
+    },
+    {
+      "fieldId": 33,
+      "fieldName": "Generation Code",
+      "fieldType": "alphanumeric",
+      "start": 297,
+      "end": 297,
+      "size": 1
+    },
+    {
+      "fieldId": 34,
+      "fieldName": "Social Security Number",
+      "fieldType": "numeric",
+      "start": 298,
+      "end": 306,
+      "size": 9
+    },
+    {
+      "fieldId": 35,
+      "fieldName": "Date of Birth",
+      "fieldType": "date",
+      "start": 307,
+      "end": 314,
+      "size": 8
+    },
+    {
+      "fieldId": 36,
+      "fieldName": "Telephone Number",
+      "fieldType": "numeric",
+      "start": 315,
+      "end": 324,
+      "size": 10
+    },
+    {
+      "fieldId": 37,
+      "fieldName": "ECOA Code",
+      "fieldType": "alphanumeric",
+      "start": 325,
+      "end": 325,
+      "size": 1
+    },
+    {
+      "fieldId": 38,
+      "fieldName": "Consumer Information INdicator",
+      "fieldType": "alphanumeric",
+      "start": 326,
+      "end": 327,
+      "size": 2
+    },
+    {
+      "fieldId": 39,
+      "fieldName": "Country Code",
+      "fieldType": "alphanumeric",
+      "start": 328,
+      "end": 329,
+      "size": 2
+    },
+    {
+      "fieldId": 40,
+      "fieldName": "First Line of Address",
+      "fieldType": "alphanumeric",
+      "start": 330,
+      "end": 361,
+      "size": 32
+    },
+    {
+      "fieldId": 41,
+      "fieldName": "Second Line of Address",
+      "fieldType": "alphanumeric",
+      "start": 362,
+      "end": 393,
+      "size": 32
+    },
+    {
+      "fieldId": 42,
+      "fieldName": "City",
+      "fieldType": "alphanumeric",
+      "start": 394,
+      "end": 413,
+      "size": 20
+    },
+    {
+      "fieldId": 43,
+      "fieldName": "State",
+      "fieldType": "alphanumeric",
+      "start": 414,
+      "end": 415,
+      "size": 2
+    },
+    {
+      "fieldId": 44,
+      "fieldName": "Zip Code",
+      "fieldType": "alphanumeric",
+      "start": 416,
+      "end": 424,
+      "size": 9
+    },
+    {
+      "fieldId": 45,
+      "fieldName": "Address Indicator",
+      "fieldType": "alphanumeric",
+      "start": 425,
+      "end": 425,
+      "size": 1
+    },
+    {
+      "fieldId": 46,
+      "fieldName": "Residence Code",
+      "fieldType": "alphanumeric",
+      "start": 426,
+      "end": 426,
+      "size": 1
+    }
+  ]
+}
